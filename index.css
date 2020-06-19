@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+hr {
+    border: 0.05px solid #e39fec;
+    box-shadow: 1px 1px 4px grey;
+}
+
+#loader {
+    background: transparent;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    animation: loader 2s linear infinite;
+}
+
+.wavy {
+    position: relative;
+    -webkit-box-reflect: below -10px linear-gradient(transparent, rgb(135, 206, 250, 0.7));
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    color: #641774;
+    animation: wave 1s ease-in-out infinite;
+    animation-delay: calc(0.1s*var(--i));
+}
+
+@keyframes wave {
+    0% {
+        transform: translatey(0px);
+    }
+    20% {
+        transform: translatey(-20px);
+    }
+    40%,
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+#home {
+    animation: loadhome 3s;
+    position: relative;
+}
+
+@keyframes loadhome {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #8332b9;
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: 0.7s;
+    transition: display 0.8s;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #c1c8e4;
+    display: inline-block;
+    transition: 0.4s;
+    font-size: 1.3rem;
+    margin: auto 1.5rem;
+}
+
+.nav a:hover {
+    font-weight: 500;
+    color: #e0e6fd;
+    text-decoration: underline;
+}
+
+#togglebtn {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+}
+
+.bar {
+    background-color: #8332b9;
+    width: 2rem;
+    height: 0.15rem;
+    margin-top: 0.2rem;
+}
+
+.start-bg {
+    background-image: linear-gradient( to right, rgb(128, 0, 128, 0.7), rgb(135, 206, 250, 0.7)), url("images/bgstart.jpeg");
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+
+#start {
+    padding: 2rem;
+    background-color: white;
+    width: 30rem;
+    color: #641774;
+    box-shadow: 1px 1px 10px grey;
+    position: relative;
+    top: 10rem;
+    left: 38rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+#main {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    transition: all 0.6s;
+    padding: 2rem;
+}
+
+#about {
+    display: flex;
+    flex-flow: row;
+    padding: 2rem;
+    box-shadow: 1px 1px 10px 1px #8332b9;
+}
+
+.whoami {
+    margin: 0 auto;
+    text-align: center;
+    width: 50vw;
+    height: auto;
+    font-size: 1.2rem;
+    color: #450952;
+}
+
+.whoami .social {
+    background-color: transparent;
+    color: aqua;
+}
+
+.whoami .social img {
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.whoami .social img:hover {
+    width: 3rem;
+    transition: width 0.3s;
+}
+
+.img {
+    box-shadow: 1px 1px 4px grey;
+}
+
+#skills {
+    margin: 5rem auto;
+    text-align: center;
+    color: #31013b;
+}
+
+.tools {
+    margin-top: 2rem;
+    list-style: none;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #450952;
+}
+
+#dropdown span::after {
+    content: ' \002B';
+    float: right;
+    margin-right: 25rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.hide {
+    display: none;
+    transition: 5s ease-in-out;
+}
+
+#projects {
+    margin: 3rem auto 0 auto;
+    padding: 2rem;
+    height: 600px;
+    background: linear-gradient(to bottom, indigo, #8332b9 70%, rgb(135, 206, 250));
+    box-sizing: border-box;
+    color: #c7d2fd;
+    text-align: center;
+}
+
+.cards {
+    margin: auto;
+    width: 200px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+}
+
+.rotate {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.rotate:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.rotate div {
+    width: 300px;
+    height: auto;
+    border: 1px solid #c1c8e4;
+    overflow: hidden;
+    position: absolute;
+}
+
+.rotate div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.rotate div:nth-child(2) {
+    transform: rotatey(90deg) translateZ(250px);
+}
+
+.rotate div:nth-child(3) {
+    transform: rotateY(180deg) translateZ(250px);
+}
+
+.rotate div:nth-child(4) {
+    transform: rotateY(270deg) translateZ(250px);
+}
+
+.card {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0 #c1c8e4;
+    transition: all 0.3s;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card :hover {
+    transform: scale(1.4);
+    transition: all 0.3s;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#contact {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #641774;
+    color: #e0e6fd;
+    box-shadow: 1px 1px 20px #8332b9;
+}
+
+.divider {
+    align-self: center;
+    background-color: #8332b9;
+    width: 30%;
+    margin: 2rem auto;
+    height: 0.1rem;
+}
+
+.social {
+    margin: 2rem auto;
+    width: fit-content;
+    border-radius: 0.5rem;
+    background-color: #c1c8e4;
+}
+
+.social img {
+    padding: 1rem;
+}
+
+.social:hover {
+    background-color: white;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f4f6fd;
+    color: #8332b9;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: inset 1px 1px 2px 1px grey;
+    text-shadow: 0.5px 0.5px 3px #8332b9;
+}
+
+@media only screen and (max-width:650px) {
+    #loader {
+        left: 10%;
+    }
+    .nav {
+        height: 100%;
+        width: 25%;
+        left: unset;
+        right: 0;
+        padding-top: 7rem;
+    }
+    .nav a {
+        display: flex;
+        flex-flow: column;
+    }
+    .start-bg {
+        height: 70%;
+    }
+    #start {
+        position: unset;
+        width: 70%;
+        margin: 0 auto;
+    }
+    #about {
+        flex-flow: column;
+    }
+    .whoami {
+        width: 60vw;
+    }
+    .whoami .social {
+        padding: 0;
+    }
+    .whoami .social img {
+        display: inline;
+        width: 2rem;
+        padding: 0;
+    }
+    .whoami .social img:hover {
+        width: 2rem;
+    }
+    img {
+        width: 100%;
+    }
+    #projects {
+        margin-left: -10%;
+        padding: 0;
+        width: 100vw;
+        height: 60vh;
+    }
+    .rotate div {
+        width: 70vw;
+    }
+    .social {
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .social img {
+        width: 3rem;
+    }
+    #contact {
+        width: 100%;
+        margin: auto 0 auto 0;
+        padding: 0;
+    }
+    .footer {
+        padding: auto 0 auto 0;
+    }
+}
