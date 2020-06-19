@@ -73,6 +73,7 @@ hr {
     padding: 1.5rem;
     transition: 0.7s;
     transition: display 0.8s;
+    z-index: 100;
 }
 
 .nav a {
