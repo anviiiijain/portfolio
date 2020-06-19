@@ -5,14 +5,11 @@ var w = window.matchMedia("(max-width=650px)");
 
 function loadPage() {
     var t = setTimeout(loadHome, 3000);
-    console.log("loadpage works");
 }
 
 function loadHome() {
     document.getElementById("home").style.display = "block";
     document.getElementById("loader").style.display = "none";
-    console.log("loadhome works");
-
 }
 
 function toggle() {
