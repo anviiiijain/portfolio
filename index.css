@@ -46,7 +46,7 @@ hr {
 }
 
 #home {
-    animation: loadhome 3s;
+    animation: loadhome 10s;
     position: relative;
 }
 
