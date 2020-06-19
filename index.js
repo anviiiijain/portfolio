@@ -27,6 +27,7 @@ function toggle() {
     }
     nav.classList.toggle("hide");
 }
+
 // var cards = document.getElementById("rocards");
 // var card = cards.children;
 // for (var n = 0; n < card.length; n++) {
