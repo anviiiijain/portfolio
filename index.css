@@ -37,7 +37,7 @@ hr {
         transform: translatey(0px);
     }
     20% {
-        transform: translatey(-20px);
+        transform: translatey(-40px);
     }
     40%,
     100% {
@@ -46,8 +46,9 @@ hr {
 }
 
 #home {
-    animation: loadhome 10s;
+    animation: loadhome 1s;
     position: relative;
+    display: none;
 }
 
 @keyframes loadhome {
