@@ -4,7 +4,7 @@ var x = document.getElementById("togglebtn").children;
 var w = window.matchMedia("(max-width=650px)");
 
 function loadPage() {
-    var t = setTimeout(loadHome, 3000);
+    var t = setTimeout(loadHome, 2000);
 }
 
 function loadHome() {
@@ -28,13 +28,25 @@ function toggle() {
     nav.classList.toggle("hide");
 }
 
-// var cards = document.getElementById("rocards");
-// var card = cards.children;
-// for (var n = 0; n < card.length; n++) {
-//     card[n].addEventListener("click", () => {
-//         document.getElementById("d" + n).classList.toggle("hide");
-//     });
-// }
+var cards = document.getElementById("rocards");
+var card = cards.children;
+var descriptions = document.getElementById("cdesp");
+var des = descriptions.children;
+card[0].addEventListener('click', () => { test(1) })
+card[1].addEventListener('click', () => { test(2) })
+card[2].addEventListener('click', () => { test(3) })
+card[3].addEventListener('click', () => { test(4) })
+
+
+function test(n) {
+    let ishidden = document.getElementById("d" + n).classList.contains("hide");
+    for (let i = 0; i < card.length; i++)
+        des[i].classList.add("hide");
+    if (ishidden) {
+        document.getElementById("d" + n).classList.remove("hide");
+    }
+
+}
 
 function htools() {
     var d = document.getElementById("drop");
