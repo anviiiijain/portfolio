@@ -10,6 +10,7 @@ function loadPage() {
 function loadHome() {
     document.getElementById("home").style.display = "block";
     document.getElementById("loader").style.display = "none";
+
 }
 
 function toggle() {
@@ -26,11 +27,19 @@ function toggle() {
     }
     nav.classList.toggle("hide");
 }
+// var cards = document.getElementById("rocards");
+// var card = cards.children;
+// for (var n = 0; n < card.length; n++) {
+//     card[n].addEventListener("click", () => {
+//         document.getElementById("d" + n).classList.toggle("hide");
+//     });
+// }
 
 function htools() {
     var d = document.getElementById("drop");
     d.classList.toggle("hide");
 }
+
 
 window.addEventListener("scroll", function() {
     nav.classList.add("hide");

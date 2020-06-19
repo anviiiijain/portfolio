@@ -195,8 +195,8 @@ hr {
 #projects {
     margin: 3rem auto 0 auto;
     padding: 2rem;
-    height: 600px;
-    background: linear-gradient(to bottom, indigo, #8332b9 70%, rgb(135, 206, 250));
+    height: auto;
+    background: linear-gradient(to bottom, indigo, #8332b9 70%, rgb(224, 243, 255));
     box-sizing: border-box;
     color: #c7d2fd;
     text-align: center;
@@ -223,7 +223,7 @@ hr {
     cursor: pointer;
 }
 
-.rotate div {
+.rotate .card {
     width: 300px;
     height: auto;
     border: 1px solid #c1c8e4;
@@ -231,19 +231,19 @@ hr {
     position: absolute;
 }
 
-.rotate div:nth-child(1) {
+.rotate .card:nth-child(1) {
     transform: rotateY(0deg) translateZ(250px);
 }
 
-.rotate div:nth-child(2) {
+.rotate .card:nth-child(2) {
     transform: rotatey(90deg) translateZ(250px);
 }
 
-.rotate div:nth-child(3) {
+.rotate .card:nth-child(3) {
     transform: rotateY(180deg) translateZ(250px);
 }
 
-.rotate div:nth-child(4) {
+.rotate .card:nth-child(4) {
     transform: rotateY(270deg) translateZ(250px);
 }
 
@@ -271,6 +271,10 @@ hr {
     }
 }
 
+.card-content {
+    margin-top: 20rem;
+}
+
 #contact {
     width: 100%;
     margin: 0;
@@ -281,7 +285,7 @@ hr {
     box-shadow: 1px 1px 20px #8332b9;
 }
 
-.divider {
+..divider {
     align-self: center;
     background-color: #8332b9;
     width: 30%;
@@ -363,7 +367,7 @@ hr {
         width: 100vw;
         height: 60vh;
     }
-    .rotate div {
+    .rotate .card {
         width: 70vw;
     }
     .social {
