@@ -197,7 +197,7 @@ hr {
 }
 
 #projects {
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto 2rem auto;
     padding: 2rem;
     height: auto;
     background: linear-gradient(to bottom, indigo, #8332b9 70%, rgb(224, 243, 255));
@@ -370,10 +370,13 @@ hr {
         flex-flow: column;
     }
     .start-bg {
+        background-image: linear-gradient( to right, rgb(128, 0, 128, 0.7), rgb(135, 206, 250, 0.7)), url("");
         height: 70%;
     }
     #start {
-        position: unset;
+        position: relative;
+        top: 15%;
+        left: 0;
         width: 70%;
         margin: 0 auto;
     }
@@ -382,6 +385,7 @@ hr {
     }
     .whoami {
         width: 60vw;
+        font-size: 1rem;
     }
     .whoami .social {
         padding: 0;
@@ -401,7 +405,10 @@ hr {
         margin-left: -10%;
         padding: 0;
         width: 100vw;
-        height: 60vh;
+        height: 90vh;
+    }
+    .card-des {
+        width: 80%;
     }
     .rotate .card {
         width: 70vw;
@@ -415,10 +422,11 @@ hr {
     }
     #contact {
         width: 100%;
-        margin: auto 0 auto 0;
+        margin: 2rem 0 auto 0;
         padding: 0;
     }
     .footer {
-        padding: auto 0 auto 0;
+        padding: 1rem 0;
+        font-size: 0.9rem;
     }
 }
