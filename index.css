@@ -401,6 +401,10 @@ hr {
     img {
         width: 100%;
     }
+    #dropdown span::after {
+        float: none;
+        margin-right: 0;
+    }
     #projects {
         margin-left: -10%;
         padding: 0;
