@@ -414,6 +414,9 @@ hr {
         width: 100vw;
         height: 90vh;
     }
+    .card-content {
+        margin-top: 10rem;
+    }
     .card-des {
         width: 80%;
     }
