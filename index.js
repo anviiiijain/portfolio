@@ -4,7 +4,7 @@ var x = document.getElementById("togglebtn").children;
 var w = window.matchMedia("(max-width=650px)");
 
 function loadPage() {
-    var t = setTimeout(loadHome, 2000);
+    var t = setTimeout(loadHome, 1000);
 }
 
 function loadHome() {
