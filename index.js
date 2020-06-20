@@ -2,6 +2,7 @@ var nav = document.getElementById("nav");
 var m = document.getElementById("main");
 var x = document.getElementById("togglebtn").children;
 var w = window.matchMedia("(max-width=650px)");
+var sb = document.getElementById("start");
 
 function loadPage() {
     var t = setTimeout(loadHome, 1000);
@@ -16,11 +17,13 @@ function loadHome() {
 function toggle() {
     if (nav.classList.contains("hide")) {
         m.style.marginTop = "5rem";
+        sb.style.marginTop = "3rem";
         for (let i = 0; i < x.length; i++) {
             x[i].style.backgroundColor = "#c9cfeb";
         }
     } else {
         m.style.marginTop = "3rem";
+        sb.style.marginTop = "0";
         for (let i = 0; i < x.length; i++) {
             x[i].style.backgroundColor = "#8332b9";
         }
