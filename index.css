@@ -73,7 +73,7 @@ hr {
     padding: 1.5rem;
     transition: 0.7s;
     transition: display 0.8s;
-    z-index: 100;
+    z-index: 200;
 }
 
 .nav a {
@@ -95,6 +95,7 @@ hr {
     position: fixed;
     top: 2rem;
     right: 3rem;
+    z-index: 300;
 }
 
 .bar {
@@ -288,6 +289,7 @@ hr {
     color: indigo;
     transition: all 0.3s ease-in-out;
     box-shadow: 0.1rem 0.1rem 0.3rem indigo;
+    z-index: 100;
 }
 
 .card img {
@@ -416,7 +418,7 @@ hr {
         width: 80%;
     }
     .rotate .card {
-        width: 70vw;
+        width: 60vw;
     }
     .social {
         margin: 0 auto;
