@@ -419,6 +419,7 @@ hr {
     }
     .card-des {
         width: 80%;
+        padding: 0;
     }
     .rotate .card {
         width: 60vw;
